@@ -4,16 +4,25 @@ body{
 }
 
 #todo-container{
+<<<<<<< HEAD
   background:#9eb7fd;
+=======
+  background: rgb(206, 129, 129);
+>>>>>>> d288bc703572511abbde1c7116b7eaeb91715ff5
   width: 500px;
   margin: 100px auto;
   border: none;
   padding: 10px;
   border-radius: 10px; 
+  
 }
 
 #todo-form::placeholder {
+<<<<<<< HEAD
   color: mediumslateblue;
+=======
+  color: rgb(122, 0, 75);
+>>>>>>> d288bc703572511abbde1c7116b7eaeb91715ff5
 }
 
 #header{ 
@@ -22,7 +31,7 @@ body{
   font-size: 20px;
   margin-top: 10px;
   margin-left: 20px;
-  color: rgb(0, 0, 0); 
+  color: rgb(124, 0, 85); 
 }
 
  #input-box{ 
@@ -45,7 +54,7 @@ body{
   border: none;
   border-radius: 40px;
   color: white;
-  background-color: #0099FF;
+  background-color: #680c84;
 } 
 
 #input-button:hover {
