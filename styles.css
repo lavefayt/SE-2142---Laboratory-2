@@ -4,11 +4,7 @@ body{
 }
 
 #todo-container{
-<<<<<<< HEAD
-  background:#9eb7fd;
-=======
   background: rgb(206, 129, 129);
->>>>>>> d288bc703572511abbde1c7116b7eaeb91715ff5
   width: 500px;
   margin: 100px auto;
   border: none;
@@ -18,11 +14,8 @@ body{
 }
 
 #todo-form::placeholder {
-<<<<<<< HEAD
   color: mediumslateblue;
-=======
   color: rgb(122, 0, 75);
->>>>>>> d288bc703572511abbde1c7116b7eaeb91715ff5
 }
 
 #header{ 
