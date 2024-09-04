@@ -1,0 +1,96 @@
+body{ 
+  background-image: linear-gradient(to right, #9e1f63 , #392d91);
+  font-family: Sans-serif;
+}
+
+#todo-container{
+  background: rgb(255,255,255);
+  width: 500px;
+  margin: 100px auto;
+  border: none;
+  padding: 10px;
+  border-radius: 10px; 
+}
+
+#todo-form::placeholder {
+  color: black;
+}
+
+#header{ 
+  width:none; 
+  margin: 5px; 
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+  color: rgb(0, 0, 0); 
+}
+
+ #input-box{ 
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  margin-right: 5px;
+  margin-left: 20px;
+  font-size: 20px;
+  background-color: #F0F0F0;
+}
+ 
+ #input-button{ 
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+  padding: 13px 45px;
+  border: none;
+  border-radius: 40px;
+  color: white;
+  background-color: #0099FF;
+} 
+
+#input-button:hover {
+  background-color: #9eb7fd; 
+} 
+
+ h3{
+  margin-left: 20px;
+  padding: 10px; 
+}
+
+input[type="checkbox"] {
+  margin-right: 10px; 
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align:left;
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+  }  
+
+li { 
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+.edit-btn, .delete-btn, .complete-btn{
+  float: right;
+  color:crimson;
+  cursor: pointer;
+  margin: 3px 5px;
+  border: none;
+  padding: 3px 5px;
+  background: none;  
+  font-size: 20px
+}  
+
+.completed {
+  text-decoration: line-through;
+  color: rgb(9, 121, 105);
+  padding: 10px;
+ }
