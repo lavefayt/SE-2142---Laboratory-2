@@ -4,7 +4,7 @@ body{
 }
 
 #todo-container{
-  background: rgb(206, 129, 129);
+  background: darkviolet;
   width: 500px;
   margin: 100px auto;
   border: none;
@@ -51,7 +51,7 @@ body{
 } 
 
 #input-button:hover {
-  background-color: #9eb7fd; 
+  background-color: violet; 
 } 
 
  h3{
@@ -83,7 +83,7 @@ li {
 
 .edit-btn, .delete-btn, .complete-btn{
   float: right;
-  color:crimson;
+  color: pink;
   cursor: pointer;
   margin: 3px 5px;
   border: none;
@@ -94,7 +94,7 @@ li {
 
 .completed {
   text-decoration: line-through;
-  color: rgb(9, 121, 105);
+  color: red;
   padding: 10px;
  }
 
