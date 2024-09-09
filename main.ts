@@ -1,10 +1,11 @@
-const inputBox = document.getElementById("input-box");
-const listContainer = document.getElementById("list-container");
-const completedCounter = document.getElementById("completed-counter");
-const uncompletedCounter = document.getElementById("uncompleted-counter");
+const inputBox = document.getElementById("input-box") as HTMLInputElement;
+const listContainer = document.getElementById("list-container")!;
+const completedCounter = document.getElementById("completed-counter")!;
+const uncompletedCounter = document.getElementById("uncompleted-counter")!;
 
 function addTask() {
   const task = inputBox.value.trim();
+  console.log(task);
   if (!task) {
     alert("Please write down a task");
     console.log("no task added");
@@ -15,8 +16,8 @@ function addTask() {
   const li = document.createElement("li");
   li.innerHTML = `
     <label>
-        <input type="checkbox">
-        <span class="text">${task}</span>
+      <input type="checkbox">
+      <span class="text">${task}</span>
     </label>
     <span class="edit-btn">Edit</span>
     <span class="delete-btn">Delete</span>
@@ -26,17 +27,20 @@ function addTask() {
 
   inputBox.value = " ";
 
-  const checkbox = li.querySelector("input");
-  const editBtn = li.querySelector(".edit-btn");
-  const taskSpan = li.querySelector("span");
-  const deleteBtn = li.querySelector(".delete-btn");
+  const checkbox = li.querySelector("input")!;
+  const editBtn = li.querySelector(".edit-btn")!;
+  const taskSpan = li.querySelector("span")!;
+  const deleteBtn = li.querySelector(".delete-btn")!;
 
   checkbox.addEventListener("click", function () {
     li.classList.toggle("completed", checkbox.checked);
   });
 
   editBtn.addEventListener("click", function () {
-    const update = prompt("Edit task:", taskSpan.textContent);
+
+
+
+    const update = prompt("Edit task:", taskSpan.textContent || "");
     if (update !== null) {
       taskSpan.textContent = update;
       li.classList.remove("completed");
