@@ -14,23 +14,31 @@ function addTask() {
   }
 
   const taskDate = dateInputBox.value
+  const date = new Date(taskDate);
 
-  if (!taskDate) {
-    alert("Please write down a date");
-    console.log("No date added");
+  if (!task || !date) {
+    alert("Please complete all fields: task name and date");
     return;
   }
 
-  const date = new Date(taskDate);
+  
 
   console.log(date);
+
+  const displayedDate = new Date(date)
+    .toDateString().split(" ").slice(1).join(" ")
+  
+    console.log(displayedDate)
 
   const li = document.createElement("li");
   li.innerHTML = /* html */ `
     <label>
       <input type="checkbox">
-      <span class="text">${task}</span>
-      <span>${date.toDateString().split(" ")}</span>
+      <span class="text">
+        ${task} <br />
+        ${displayedDate}
+      </span>
+      
     </label>
     <span class="edit-btn">Edit</span>
     <span class="delete-btn">Delete</span>
