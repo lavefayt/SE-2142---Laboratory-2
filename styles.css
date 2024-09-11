@@ -3,8 +3,8 @@ body{
   font-family: Sans-serif;
 }
 
-#todo-container {
-  background: darkviolet;
+#todo-container{
+  background: rgb(192, 106, 106);
   width: 500px;
   margin: 100px auto;
   border: none;
