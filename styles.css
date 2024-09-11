@@ -1,10 +1,10 @@
 body{ 
-  background-image: linear-gradient(to right, #9e1f63 , #392d91);
+  background-image: linear-gradient(to right, #ffd3eb , #b73d9c);
   font-family: Sans-serif;
 }
 
 #todo-container{
-  background: rgb(206, 129, 129);
+  background: rgb(192, 106, 106);
   width: 500px;
   margin: 100px auto;
   border: none;
