@@ -1,4 +1,5 @@
 const inputBox = document.getElementById("input-box") as HTMLInputElement;
+const dateInput = document.getElementById("input-date") as HTMLInputElement;
 const listContainer = document.getElementById("list-container")!;
 const completedCounter = document.getElementById("completed-counter")!;
 const uncompletedCounter = document.getElementById("uncompleted-counter")!;
@@ -6,18 +7,28 @@ const uncompletedCounter = document.getElementById("uncompleted-counter")!;
 function addTask() {
   const task = inputBox.value.trim();
   console.log(task);
-  if (!task) {
-    alert("Please write down a task");
-    console.log("no task added");
 
+  const date = dateInput.value
+
+  if (!task || !date) {
+    alert("Please complete all fields: task name and date");
     return;
   }
 
+  const displayedDate = new Date(date)
+    .toDateString().split(" ").slice(1).join(" ")
+  
+    console.log(displayedDate)
+
   const li = document.createElement("li");
-  li.innerHTML = `
+  li.innerHTML = /* html */ `
     <label>
       <input type="checkbox">
-      <span class="text">${task}</span>
+      <span class="text">
+        ${task} <br />
+        ${displayedDate}
+      </span>
+      
     </label>
     <span class="edit-btn">Edit</span>
     <span class="delete-btn">Delete</span>
