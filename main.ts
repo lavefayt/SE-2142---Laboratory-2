@@ -1,23 +1,36 @@
 const inputBox = document.getElementById("input-box") as HTMLInputElement;
+const dateInputBox = document.getElementById("input-date") as HTMLInputElement;
 const listContainer = document.getElementById("list-container")!;
 const completedCounter = document.getElementById("completed-counter")!;
 const uncompletedCounter = document.getElementById("uncompleted-counter")!;
 
 function addTask() {
   const task = inputBox.value.trim();
-  console.log(task);
+
   if (!task) {
     alert("Please write down a task");
     console.log("no task added");
-
     return;
   }
 
+  const taskDate = dateInputBox.value
+
+  if (!taskDate) {
+    alert("Please write down a date");
+    console.log("No date added");
+    return;
+  }
+
+  const date = new Date(taskDate);
+
+  console.log(date);
+
   const li = document.createElement("li");
-  li.innerHTML = `
+  li.innerHTML = /* html */ `
     <label>
       <input type="checkbox">
       <span class="text">${task}</span>
+      <span>${date.toDateString().split(" ")}</span>
     </label>
     <span class="edit-btn">Edit</span>
     <span class="delete-btn">Delete</span>
@@ -37,9 +50,6 @@ function addTask() {
   });
 
   editBtn.addEventListener("click", function () {
-
-
-
     const update = prompt("Edit task:", taskSpan.textContent || "");
     if (update !== null) {
       taskSpan.textContent = update;
@@ -48,9 +58,7 @@ function addTask() {
   });
 
   deleteBtn.addEventListener("click", function () {
-    {
-      li.remove();
-    }
+    li.remove();
   });
 }
 
